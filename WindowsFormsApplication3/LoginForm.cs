@@ -29,7 +29,7 @@ namespace Irama
             }
             else
             {
-                MessageBox.Show("wrong input");
+                MessageBox.Show("Username dan password salah.");
             }
         }
 

@@ -15,6 +15,7 @@ namespace Irama
         public FormSiswaBaru()
         {
             InitializeComponent();
+            CenterToParent();
         }
 
         private void FormSiswaBaru_Load(object sender, EventArgs e)

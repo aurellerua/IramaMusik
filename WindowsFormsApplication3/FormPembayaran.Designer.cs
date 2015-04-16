@@ -111,14 +111,14 @@
             this.textBoxBayarBulan.Location = new System.Drawing.Point(227, 225);
             this.textBoxBayarBulan.Name = "textBoxBayarBulan";
             this.textBoxBayarBulan.Size = new System.Drawing.Size(100, 20);
-            this.textBoxBayarBulan.TabIndex = 8;
+            this.textBoxBayarBulan.TabIndex = 7;
             // 
             // textBoxBukuLevel
             // 
             this.textBoxBukuLevel.Location = new System.Drawing.Point(227, 263);
             this.textBoxBukuLevel.Name = "textBoxBukuLevel";
             this.textBoxBukuLevel.Size = new System.Drawing.Size(100, 20);
-            this.textBoxBukuLevel.TabIndex = 9;
+            this.textBoxBukuLevel.TabIndex = 8;
             // 
             // label6
             // 
@@ -135,7 +135,7 @@
             this.textID.Location = new System.Drawing.Point(127, 177);
             this.textID.Name = "textID";
             this.textID.Size = new System.Drawing.Size(200, 20);
-            this.textID.TabIndex = 11;
+            this.textID.TabIndex = 6;
             // 
             // button1
             // 

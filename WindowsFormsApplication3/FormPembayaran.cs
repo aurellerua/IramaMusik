@@ -15,6 +15,7 @@ namespace Irama
         public FormPembayaran()
         {
             InitializeComponent();
+            CenterToParent();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -29,7 +30,7 @@ namespace Irama
             string idsiswa = textID.Text;
             string bulan = textBoxBayarBulan.Text;
             string buku = textBoxBukuLevel.Text;
-            DateTime tanggal = Convert.ToDateTime(dateTimePemb);
+            DateTime tanggal = dateTimePemb.Value.Date;
 
             if (nama != "" & idsiswa != "")
             {
@@ -61,6 +62,7 @@ namespace Irama
                 MessageBox.Show("Data siswa harus lengkap!");
             }
         }
-        }
+        
     }
+
 }

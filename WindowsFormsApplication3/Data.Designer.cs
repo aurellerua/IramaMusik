@@ -30,6 +30,8 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.deleteRecSiswa = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -37,6 +39,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.deleteRecPembayaran = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -54,6 +58,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.deleteRecSiswa);
+            this.tabPage1.Controls.Add(this.button5);
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.textBox2);
             this.tabPage1.Controls.Add(this.button1);
@@ -65,13 +71,33 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // deleteRecSiswa
+            // 
+            this.deleteRecSiswa.Location = new System.Drawing.Point(220, 386);
+            this.deleteRecSiswa.Name = "deleteRecSiswa";
+            this.deleteRecSiswa.Size = new System.Drawing.Size(75, 23);
+            this.deleteRecSiswa.TabIndex = 7;
+            this.deleteRecSiswa.Text = "Hapus";
+            this.deleteRecSiswa.UseVisualStyleBackColor = true;
+            this.deleteRecSiswa.Click += new System.EventHandler(this.deleteRecSiswa_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(139, 386);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "Ubah";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(490, 386);
+            this.button4.Location = new System.Drawing.Point(490, 385);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(83, 23);
             this.button4.TabIndex = 5;
-            this.button4.Text = "Search name";
+            this.button4.Text = "Cari nama";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -94,6 +120,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.deleteRecPembayaran);
+            this.tabPage2.Controls.Add(this.button7);
             this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.textBox1);
             this.tabPage2.Controls.Add(this.button2);
@@ -111,7 +139,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(83, 23);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Search name";
+            this.button3.Text = "Cari nama";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // textBox1
@@ -130,6 +158,26 @@
             this.button2.Text = "+ Data baru";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // deleteRecPembayaran
+            // 
+            this.deleteRecPembayaran.Location = new System.Drawing.Point(221, 386);
+            this.deleteRecPembayaran.Name = "deleteRecPembayaran";
+            this.deleteRecPembayaran.Size = new System.Drawing.Size(75, 23);
+            this.deleteRecPembayaran.TabIndex = 9;
+            this.deleteRecPembayaran.Text = "Hapus";
+            this.deleteRecPembayaran.UseVisualStyleBackColor = true;
+            this.deleteRecPembayaran.Click += new System.EventHandler(this.deleteRecPembayaran_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(140, 386);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 8;
+            this.button7.Text = "Ubah";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Data
             // 
@@ -163,5 +211,9 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button deleteRecSiswa;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button deleteRecPembayaran;
+        private System.Windows.Forms.Button button7;
     }
 }

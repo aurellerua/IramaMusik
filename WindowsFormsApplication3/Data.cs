@@ -19,20 +19,22 @@ namespace Irama
             CenterToParent();
         }
 
-        DataGridView dg1 = new DataGridView();
-        DataGridView dg2 = new DataGridView();
+        DataGridView dg1 = new DataGridView(); //siswa
+        DataGridView dg2 = new DataGridView(); //pembayaran
+        MySqlDataAdapter adap;
+        DataSet ds;
+        MySql.Data.MySqlClient.MySqlConnection conn;
 
         private void Data_Load(object sender, EventArgs e)
         {
             tabPage1.Text = "Siswa";
             tabPage2.Text = "Pembayaran";
 
-            MySql.Data.MySqlClient.MySqlConnection conn;
             string myConnectionString;
 
             myConnectionString = "server=127.0.0.1;uid=root;" +
                 "pwd=;database=iramamusik;";
-
+                
             try
             {
                 conn = new MySql.Data.MySqlClient.MySqlConnection();
@@ -41,9 +43,9 @@ namespace Irama
 
                 // load data and bind it to gridview
                 MySqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = "select id,name as Nama,no_telp as 'no. telp',alamat,jenis_kursus as 'jenis kursus', grade from siswa";
-                MySqlDataAdapter adap = new MySqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
+                cmd.CommandText = "select id as 'ID Siswa',name as Nama,no_telp as 'No. Telp',alamat as Alamat,jenis_kursus as 'Jenis Kursus', grade as Grade from siswa";
+                adap = new MySqlDataAdapter(cmd);
+                ds = new DataSet();
                 adap.Fill(ds);
 
                 dg1.Location = new Point(13, 13);
@@ -72,13 +74,13 @@ namespace Irama
                 // ----------- TAB PEMBAYARAN -------------
                 // ----------------------------------------
 
-                    cmd.CommandText = "select parent_id, name as Nama, lastpaid_bulanan as 'bulan terakhir', lastpaid_booklevel as 'buku terakhir' from pembayaran, siswa where siswa.id = pembayaran.parent_id";
-                MySqlDataAdapter adap1 = new MySqlDataAdapter(cmd);
-                DataSet ds1 = new DataSet();
-                adap.Fill(ds1);
+                    cmd.CommandText = "select id_pemb as 'ID Pembayaran', tanggal as Tanggal, name as Nama, idsiswa as 'ID Siswa', lastpaid_bulanan as 'Bulan Terakhir', lastpaid_booklevel as 'Level Buku' from pembayaran, siswa where siswa.id = pembayaran.idsiswa";
+                adap = new MySqlDataAdapter(cmd);
+                ds = new DataSet();
+                adap.Fill(ds);
                 DataGridView dg2 = new DataGridView();
                 dg2.Location = new Point(13, 13);
-                dg2.DataSource = ds1.Tables[0].DefaultView;
+                dg2.DataSource = ds.Tables[0].DefaultView;
 
                 // size control
                 foreach (DataGridViewRow row in dg2.Rows)
@@ -143,7 +145,7 @@ namespace Irama
                 MessageBox.Show(ex.Message);
             }
         }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -158,6 +160,132 @@ namespace Irama
             fPemb.Show();
         }
 
+        private void button5_Click(object sender, EventArgs e) // update siswa
+        {
+            int columnidx = dg1.CurrentCell.ColumnIndex;
+            int rowidx = dg1.CurrentCell.RowIndex;
+            string selectedCellVal = dg1[columnidx, rowidx].Value.ToString();
+            string getIdVal = dg1[0, rowidx].Value.ToString();
+
+            MySqlCommand cmd = conn.CreateCommand();
+            string column = "";
+            switch (columnidx)
+            {
+                case 1:
+                    column = "name";
+                    break;
+                case 2:
+                    column = "no_telp";
+                    break;
+                case 3:
+                    column = "alamat";
+                    break;
+                case 4:
+                    column = "jenis_kursus";
+                    break;
+                case 5:
+                    column = "grade";
+                    break;
+            }
+
+            cmd.CommandText = "update siswa set " + column + "='" + dg1.SelectedCells[0].Value + "' where id=" + getIdVal;
+            adap = new MySqlDataAdapter(cmd);
+            ds = new DataSet();
+            adap.Fill(ds);
+            MessageBox.Show("Perubahan tersimpan.", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void deleteRecSiswa_Click(object sender, EventArgs e)
+        {
+            int rowidx = dg1.CurrentCell.RowIndex;
+            string getIdVal = dg1[0, rowidx].Value.ToString();
+
+            try
+            {
+                MySqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = "delete from siswa where id=" + getIdVal;
+                MySqlDataAdapter adap = new MySqlDataAdapter(cmd);
+                ds = new DataSet();
+                adap.Fill(ds);
+
+                cmd.CommandText = "select id,name as Nama,no_telp as 'no. telp',alamat,jenis_kursus as 'jenis kursus' from siswa";
+                adap = new MySqlDataAdapter(cmd);
+                ds = new DataSet();
+                adap.Fill(ds);
+
+                dg1.DataSource = ds.Tables[0].DefaultView;
+                tabPage1.Controls.Add(dg1);
+                MessageBox.Show("Data terhapus.", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                MessageBox.Show("Can't delete record constrained by foreign key", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e) // update pembayaran
+        {
+            //int columnidx = dg2.CurrentCell.ColumnIndex;
+            int columnidx = dg2.CurrentCell.ColumnIndex;
+            int rowidx = dg2.CurrentCell.RowIndex;
+            string selectedCellVal = dg2[columnidx, rowidx].Value.ToString();
+            string getIdVal = dg2[0, rowidx].Value.ToString();
+
+            MySqlCommand cmd = conn.CreateCommand();
+            string column = "";
+            switch (columnidx)
+            {
+                case 2:
+                    column = "nama";
+                    break;
+                case 3:
+                    column = "idsiswa";
+                    break;
+                case 4:
+                    column = "lastpaid_bulanan";
+                    break;
+                case 5:
+                    column = "lastpaid_booklevel";
+                    break;
+            }
+
+            cmd.CommandText = "update pembayaran set " + column + "='" + dg2.SelectedCells[0].Value + "' where id_pemb=" + getIdVal;
+            adap = new MySqlDataAdapter(cmd);
+            ds = new DataSet();
+            adap.Fill(ds);
+            MessageBox.Show("Perubahan tersimpan.", "Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void deleteRecPembayaran_Click(object sender, EventArgs e)
+        {
+            int rowidx = dg2.CurrentCell.RowIndex;
+            //int rowidx = 1;
+            string getIdVal = dg2[0, rowidx].Value.ToString();
+
+            try
+            {
+                MySqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = "delete from pembayaran where id_pemb=" + getIdVal;
+                MySqlDataAdapter adap = new MySqlDataAdapter(cmd);
+                ds = new DataSet();
+                adap.Fill(ds);
+
+                cmd.CommandText = "select id_pemb, tanggal, nama, idsiswa, lastpaid_bulanan as 'Bulan Terakhir', lastpaid_booklevel as 'Level Buku' from pembayaran, siswa where siswa.id = pembayaran.id_pemb";
+                adap = new MySqlDataAdapter(cmd);
+                ds = new DataSet();
+                adap.Fill(ds);
+
+                dg2.DataSource = ds.Tables[0].DefaultView;
+                tabPage2.Controls.Add(dg2);
+                MessageBox.Show("Data terhapus.", "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (MySql.Data.MySqlClient.MySqlException)
+            {
+                MessageBox.Show("Can't delete record constrained by foreign key", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        
         
     }
 }
