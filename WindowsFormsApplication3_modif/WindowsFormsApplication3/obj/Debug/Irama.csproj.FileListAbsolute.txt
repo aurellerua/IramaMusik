@@ -1,0 +1,10 @@
+c:\Projects\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.config
+c:\Projects\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe
+c:\Projects\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.pdb
+c:\Projects\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\Irama.LoginForm.resources
+c:\Projects\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\Irama.Properties.Resources.resources
+c:\Projects\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\Irama.csproj.GenerateResource.Cache
+c:\Projects\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe
+c:\Projects\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.pdb
+c:\Projects\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\Irama.Data.resources
+c:\Projects\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\Irama.csprojResolveAssemblyReference.cache
