@@ -22,3 +22,15 @@ C:\Users\Hp\Documents\Visual Studio 2012\Projects\WindowsFormsApplication3\obj\D
 C:\Users\Hp\Documents\Visual Studio 2012\Projects\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe
 C:\Users\Hp\Documents\Visual Studio 2012\Projects\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.pdb
 C:\Users\Hp\Documents\Visual Studio 2012\Projects\WindowsFormsApplication3\obj\Debug\Irama.FormSiswaBaru.resources
+C:\Users\Hp\Documents\Visual Studio 2012\Projects\IramaMusik\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.config
+C:\Users\Hp\Documents\Visual Studio 2012\Projects\IramaMusik\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe
+C:\Users\Hp\Documents\Visual Studio 2012\Projects\IramaMusik\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.pdb
+C:\Users\Hp\Documents\Visual Studio 2012\Projects\IramaMusik\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe
+C:\Users\Hp\Documents\Visual Studio 2012\Projects\IramaMusik\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.pdb
+C:\Users\Hp\Documents\Visual Studio 2012\Projects\IramaMusik\WindowsFormsApplication3\obj\Debug\Irama.csprojResolveAssemblyReference.cache
+C:\Users\Hp\Documents\Visual Studio 2012\Projects\IramaMusik\WindowsFormsApplication3\obj\Debug\Irama.Data.resources
+C:\Users\Hp\Documents\Visual Studio 2012\Projects\IramaMusik\WindowsFormsApplication3\obj\Debug\Irama.FormSiswaBaru.resources
+C:\Users\Hp\Documents\Visual Studio 2012\Projects\IramaMusik\WindowsFormsApplication3\obj\Debug\Irama.LoginForm.resources
+C:\Users\Hp\Documents\Visual Studio 2012\Projects\IramaMusik\WindowsFormsApplication3\obj\Debug\Irama.Properties.Resources.resources
+C:\Users\Hp\Documents\Visual Studio 2012\Projects\IramaMusik\WindowsFormsApplication3\obj\Debug\Irama.csproj.GenerateResource.Cache
+C:\Users\Hp\Documents\Visual Studio 2012\Projects\IramaMusik\WindowsFormsApplication3\obj\Debug\Irama.FormPembayaran.resources

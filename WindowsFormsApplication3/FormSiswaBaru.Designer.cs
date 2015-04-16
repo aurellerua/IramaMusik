@@ -95,28 +95,28 @@
             this.textAlamat.Location = new System.Drawing.Point(134, 139);
             this.textAlamat.Name = "textAlamat";
             this.textAlamat.Size = new System.Drawing.Size(206, 20);
-            this.textAlamat.TabIndex = 6;
+            this.textAlamat.TabIndex = 7;
             // 
             // textNotelp
             // 
             this.textNotelp.Location = new System.Drawing.Point(134, 183);
             this.textNotelp.Name = "textNotelp";
             this.textNotelp.Size = new System.Drawing.Size(206, 20);
-            this.textNotelp.TabIndex = 7;
+            this.textNotelp.TabIndex = 8;
             // 
             // textJenis
             // 
             this.textJenis.Location = new System.Drawing.Point(134, 227);
             this.textJenis.Name = "textJenis";
             this.textJenis.Size = new System.Drawing.Size(206, 20);
-            this.textJenis.TabIndex = 8;
+            this.textJenis.TabIndex = 9;
             // 
             // textNama
             // 
             this.textNama.Location = new System.Drawing.Point(134, 98);
             this.textNama.Name = "textNama";
             this.textNama.Size = new System.Drawing.Size(206, 20);
-            this.textNama.TabIndex = 9;
+            this.textNama.TabIndex = 6;
             // 
             // buttonTambah
             // 
@@ -127,6 +127,7 @@
             this.buttonTambah.TabIndex = 10;
             this.buttonTambah.Text = "Tambah";
             this.buttonTambah.UseVisualStyleBackColor = true;
+            this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
             // 
             // FormSiswaBaru
             // 
@@ -158,10 +159,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textNama; 
         private System.Windows.Forms.TextBox textAlamat;
         private System.Windows.Forms.TextBox textNotelp;
         private System.Windows.Forms.TextBox textJenis;
-        private System.Windows.Forms.TextBox textNama;
         private System.Windows.Forms.Button buttonTambah;
     }
 }

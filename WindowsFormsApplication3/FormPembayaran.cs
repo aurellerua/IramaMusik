@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace Irama
 {
-    public partial class FormSiswaBaru : Form
+    public partial class FormPembayaran : Form
     {
-        public FormSiswaBaru()
+        public FormPembayaran()
         {
             InitializeComponent();
         }
 
-        private void FormSiswaBaru_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonTambah_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             MySql.Data.MySqlClient.MySqlConnection conn;
             string myConnectionString;
@@ -31,11 +26,12 @@ namespace Irama
                 "pwd=;database=iramamusik;";
 
             string nama = textNama.Text;
-            string alamat = textAlamat.Text;
-            string notelp = textNotelp.Text;
-            string jenis = textJenis.Text;
+            string idsiswa = textID.Text;
+            string bulan = textBoxBayarBulan.Text;
+            string buku = textBoxBukuLevel.Text;
+            DateTime tanggal = Convert.ToDateTime(dateTimePemb);
 
-            if (nama != "" & alamat != "" & notelp != "" & jenis != "")
+            if (nama != "" & idsiswa != "")
             {
                 try
                 {
@@ -44,7 +40,7 @@ namespace Irama
                     conn.Open();
                     MySql.Data.MySqlClient.MySqlCommand cmd = conn.CreateCommand();
                     long id = cmd.LastInsertedId;
-                    cmd.CommandText = "insert into siswa values ('id', '" + nama + "', '" + notelp + "', '" + alamat + "', '" + jenis + "', '1')";
+                    cmd.CommandText = "insert into pembayaran values ('id', '" + tanggal + "', '" + nama + "', '" + idsiswa + "', '" + bulan + "', '" + buku + "')";
                     MySql.Data.MySqlClient.MySqlDataAdapter adap = new MySql.Data.MySqlClient.MySqlDataAdapter(cmd);
                     DataSet ds = new DataSet();
                     adap.Fill(ds);
@@ -62,10 +58,9 @@ namespace Irama
             }
             else
             {
-                MessageBox.Show("Data harus lengkap!");
+                MessageBox.Show("Data siswa harus lengkap!");
             }
         }
-
-        
+        }
     }
 }

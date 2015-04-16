@@ -144,6 +144,20 @@ namespace Irama
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormSiswaBaru fSiswa = new FormSiswaBaru();
+            fSiswa.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormPembayaran fPemb = new FormPembayaran();
+            fPemb.Show();
+        }
+
         
     }
 }
