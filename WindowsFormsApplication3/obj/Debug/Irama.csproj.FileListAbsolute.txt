@@ -1,0 +1,24 @@
+c:\Projects\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.config
+c:\Projects\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe
+c:\Projects\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.pdb
+c:\Projects\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\Irama.LoginForm.resources
+c:\Projects\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\Irama.Properties.Resources.resources
+c:\Projects\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\Irama.csproj.GenerateResource.Cache
+c:\Projects\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe
+c:\Projects\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.pdb
+c:\Projects\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\Irama.Data.resources
+c:\Projects\visual studio 2013\Projects\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\Irama.csprojResolveAssemblyReference.cache
+C:\Users\Hp\Downloads\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.config
+C:\Users\Hp\Downloads\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe
+C:\Users\Hp\Downloads\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.pdb
+C:\Users\Hp\Documents\Visual Studio 2012\Projects\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe.config
+C:\Users\Hp\Documents\Visual Studio 2012\Projects\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.exe
+C:\Users\Hp\Documents\Visual Studio 2012\Projects\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.pdb
+C:\Users\Hp\Documents\Visual Studio 2012\Projects\WindowsFormsApplication3\obj\Debug\Irama.csprojResolveAssemblyReference.cache
+C:\Users\Hp\Documents\Visual Studio 2012\Projects\WindowsFormsApplication3\obj\Debug\Irama.Data.resources
+C:\Users\Hp\Documents\Visual Studio 2012\Projects\WindowsFormsApplication3\obj\Debug\Irama.LoginForm.resources
+C:\Users\Hp\Documents\Visual Studio 2012\Projects\WindowsFormsApplication3\obj\Debug\Irama.Properties.Resources.resources
+C:\Users\Hp\Documents\Visual Studio 2012\Projects\WindowsFormsApplication3\obj\Debug\Irama.csproj.GenerateResource.Cache
+C:\Users\Hp\Documents\Visual Studio 2012\Projects\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.exe
+C:\Users\Hp\Documents\Visual Studio 2012\Projects\WindowsFormsApplication3\bin\Debug\WindowsFormsApplication3.pdb
+C:\Users\Hp\Documents\Visual Studio 2012\Projects\WindowsFormsApplication3\obj\Debug\Irama.FormSiswaBaru.resources
