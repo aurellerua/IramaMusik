@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePemb = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.textNama = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,6 +39,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textID = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.textTanggal = new System.Windows.Forms.TextBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -61,13 +62,6 @@
             this.label2.Size = new System.Drawing.Size(74, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tanggal :";
-            // 
-            // dateTimePemb
-            // 
-            this.dateTimePemb.Location = new System.Drawing.Point(127, 100);
-            this.dateTimePemb.Name = "dateTimePemb";
-            this.dateTimePemb.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePemb.TabIndex = 3;
             // 
             // label3
             // 
@@ -148,11 +142,32 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // textTanggal
+            // 
+            this.textTanggal.Location = new System.Drawing.Point(127, 100);
+            this.textTanggal.Name = "textTanggal";
+            this.textTanggal.Size = new System.Drawing.Size(200, 20);
+            this.textTanggal.TabIndex = 3;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Red;
+            this.linkLabel1.Location = new System.Drawing.Point(39, 322);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(44, 13);
+            this.linkLabel1.TabIndex = 13;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Kembali";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // FormPembayaran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(341, 372);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.textTanggal);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textID);
             this.Controls.Add(this.label6);
@@ -162,7 +177,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textNama);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateTimePemb);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormPembayaran";
@@ -176,7 +190,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePemb;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textNama;
         private System.Windows.Forms.Label label4;
@@ -186,5 +199,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textID;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textTanggal;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

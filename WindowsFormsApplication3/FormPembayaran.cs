@@ -30,7 +30,7 @@ namespace Irama
             string idsiswa = textID.Text;
             string bulan = textBoxBayarBulan.Text;
             string buku = textBoxBukuLevel.Text;
-            DateTime tanggal = dateTimePemb.Value.Date;
+            string tanggal = textTanggal.Text;
 
             if (nama != "" & idsiswa != "")
             {
@@ -61,6 +61,13 @@ namespace Irama
             {
                 MessageBox.Show("Data siswa harus lengkap!");
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            FormPembayaran fPemb = new FormPembayaran();
+            fPemb.Show();
         }
         
     }

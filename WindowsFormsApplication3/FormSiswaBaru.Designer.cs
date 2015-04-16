@@ -38,6 +38,7 @@
             this.textJenis = new System.Windows.Forms.TextBox();
             this.textNama = new System.Windows.Forms.TextBox();
             this.buttonTambah = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -129,11 +130,24 @@
             this.buttonTambah.UseVisualStyleBackColor = true;
             this.buttonTambah.Click += new System.EventHandler(this.buttonTambah_Click);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Red;
+            this.linkLabel1.Location = new System.Drawing.Point(28, 283);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(44, 13);
+            this.linkLabel1.TabIndex = 11;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Kembali";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // FormSiswaBaru
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(352, 323);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.buttonTambah);
             this.Controls.Add(this.textNama);
             this.Controls.Add(this.textJenis);
@@ -164,5 +178,6 @@
         private System.Windows.Forms.TextBox textNotelp;
         private System.Windows.Forms.TextBox textJenis;
         private System.Windows.Forms.Button buttonTambah;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

@@ -78,7 +78,7 @@ namespace Irama
                 adap = new MySqlDataAdapter(cmd);
                 ds = new DataSet();
                 adap.Fill(ds);
-                DataGridView dg2 = new DataGridView();
+                dg2 = new DataGridView();
                 dg2.Location = new Point(13, 13);
                 dg2.DataSource = ds.Tables[0].DefaultView;
 
@@ -96,6 +96,8 @@ namespace Irama
                 width += dg2.RowHeadersWidth;
 
                 tabPage2.Controls.Add(dg2); // add datagridview to tabPage2
+
+                //dg2.Columns[0].Width = 30;                    
                 dg2.ClientSize = new Size(width - 58, height - 21);
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
@@ -283,9 +285,6 @@ namespace Irama
             {
                 MessageBox.Show("Can't delete record constrained by foreign key", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        
-        
+        }                
     }
 }

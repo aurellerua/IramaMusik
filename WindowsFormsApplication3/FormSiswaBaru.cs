@@ -67,6 +67,13 @@ namespace Irama
             }
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            FormSiswaBaru fSiswa = new FormSiswaBaru();
+            fSiswa.Show();
+        }
+
         
     }
 }
